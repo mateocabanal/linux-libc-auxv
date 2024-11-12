@@ -40,11 +40,11 @@ use core::mem::size_of;
 #[derive(Debug, Default)]
 pub struct InitialLinuxLibcStackLayoutBuilder<'a> {
     /// List of C-strings for program arguments/argument variables.
-    arg_v: Vec<&'a str>,
+    pub arg_v: Vec<&'a str>,
     /// List of C-strings for environment variables.
-    env_v: Vec<&'a str>,
+    pub env_v: Vec<&'a str>,
     /// List of (key=value)-pairs for the auxiliary vector.
-    aux_v: BTreeSet<AuxVar<'a>>,
+    pub aux_v: BTreeSet<AuxVar<'a>>,
 }
 
 impl<'a> InitialLinuxLibcStackLayoutBuilder<'a> {
